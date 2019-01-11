@@ -15,6 +15,8 @@ void InitContact(Contact*p)
 		exit(EXIT_FAILURE);
 	}
 	p->capacity = 3;
+
+	LoadContact(p);
 }
 
 void DistroyContact(Contact *p)
@@ -87,6 +89,7 @@ void ShowContact(Contact *p)
 		printf("%-10s\t%-5s\t%-5s\t%-12s\t%-15s\n", p->data[i].name, p->data[i].sex, 
 									p->data[i].age, p->data[i].tele, p->data[i].addr);
 	}
+	printf("\n");
 }
 
 int FindByName(Contact *p)
@@ -214,12 +217,72 @@ void SortContactByName(Contact *p)
 		{
 			if (strcmp(p->data[j].name, p->data[j + 1].name) > 0)
 			{
-				char temp[NAME_MAX] = { 0 };
-				strcpy(temp, p->data[j].name);
-				strcpy(p->data[j].name, p->data[j + 1].name);
-				strcpy(p->data[j + 1].name, temp);
+				PeoInfo temp;
+				temp = p->data[j];
+				p->data[j] = p->data[j + 1];
+				p->data[j + 1] = temp;
 			}
 		}
 	}
 	ShowContact(p);
+}
+
+
+void SaveContact(Contact *p)
+{
+	FILE* ptr = fopen("Contact.txt", "wb");
+	int i = 0;
+	if (ptr == NULL)
+	{
+		perror("SaveContact::fopen");
+		system("pause");
+		return;
+	}
+
+	for (i = 0; i < p->sz; i++)
+	{
+		fwrite(&(p->data[i]), sizeof(PeoInfo), 1, ptr);
+	}
+	fclose(ptr);
+	ptr = NULL;
+}
+
+void LoadContact(Contact *p)
+{
+	FILE *pc = fopen("Contact.txt", "rb");
+	PeoInfo temp = { 0 };
+	if (pc == NULL)
+	{
+		perror("LoadContact::fopen");
+		system("pause");
+		return;
+	}
+	while (fread(&temp, sizeof(PeoInfo), 1, pc))
+	{
+		CheckCapacity(p);
+		p->data[p->sz] = temp;
+		p->sz++;
+	}
+	fclose(pc);
+	pc = NULL;
+}
+void EmptyContact(Contact *p)
+{
+	assert(p);
+	int i = 0;
+	if (p->sz == 0)
+	{
+		printf("数据为空，不需要清除!\n");
+		return;
+	}
+
+	while (p->sz)
+	{
+		for (i = 0; i < p->sz; i++)
+		{
+			p->data[i] = p->data[i + 1];
+		}
+		p->sz--;
+	}
+	printf("通讯录已被清除!\n");
 }

@@ -47,6 +47,9 @@ int CheckCapacity(Contact *p);
 void SearchContactByName(Contact *p);
 void ModifyContact(Contact *p);
 void SortContactByName(Contact *p);
+void SaveContact(Contact *p);
+void LoadContact(Contact *p);
+void EmptyContact(Contact *p);
 
 
 

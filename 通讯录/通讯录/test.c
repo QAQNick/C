@@ -55,6 +55,7 @@ void test()
 			ShowContact(&con);
 			break;
 		case EMPTY:
+			EmptyContact(&con);
 			DistroyContact(&con);
 			printf("已清除所有数据!\n");
 			break;
@@ -62,6 +63,8 @@ void test()
 			SortContactByName(&con);
 			break;
 		case EXIT:
+			SaveContact(&con);
+			DistroyContact(&con);
 			printf("退出程序!");
 			break;
 		default:
