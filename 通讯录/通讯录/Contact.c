@@ -275,7 +275,7 @@ void EmptyContact(Contact *p)
 		printf("数据为空，不需要清除!\n");
 		return;
 	}
-
+	 
 	for (i = 0; i < p->sz; i++)
 	{
 		p->data[i] = p->data[i + 1];
