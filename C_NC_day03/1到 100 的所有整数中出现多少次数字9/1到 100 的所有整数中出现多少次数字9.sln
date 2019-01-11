@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1到 100 的所有整数中出现多少次数字9", "1到 100 的所有整数中出现多少次数字9\1到 100 的所有整数中出现多少次数字9.vcxproj", "{1818CB55-F21E-4A0E-AEF0-49A840BBC706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1818CB55-F21E-4A0E-AEF0-49A840BBC706}.Debug|x64.ActiveCfg = Debug|x64
+		{1818CB55-F21E-4A0E-AEF0-49A840BBC706}.Debug|x64.Build.0 = Debug|x64
+		{1818CB55-F21E-4A0E-AEF0-49A840BBC706}.Debug|x86.ActiveCfg = Debug|Win32
+		{1818CB55-F21E-4A0E-AEF0-49A840BBC706}.Debug|x86.Build.0 = Debug|Win32
+		{1818CB55-F21E-4A0E-AEF0-49A840BBC706}.Release|x64.ActiveCfg = Release|x64
+		{1818CB55-F21E-4A0E-AEF0-49A840BBC706}.Release|x64.Build.0 = Release|x64
+		{1818CB55-F21E-4A0E-AEF0-49A840BBC706}.Release|x86.ActiveCfg = Release|Win32
+		{1818CB55-F21E-4A0E-AEF0-49A840BBC706}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E06E6560-F7F4-4C63-8D69-1B624F43F1E4}
+	EndGlobalSection
+EndGlobal
