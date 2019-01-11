@@ -16,13 +16,10 @@ void game()
 	char show[ROWS][COLS] = { 0 };//存放排查出的雷的信息
 	InitBoard(mine, ROWS, COLS, '0');//初始化棋盘
 	InitBoard(show, ROWS, COLS, '*');
-
+	DisplayBoard(show, ROW, COL);
 	SetMine(mine, ROW, COL);//埋雷
 	DisplayBoard(mine, ROW, COL);
-	DisplayBoard(show, ROW, COL);
-
 	FindMine(mine, show, ROW, COL);
-
 }
 
 int main()

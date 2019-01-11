@@ -1,5 +1,6 @@
+#ifndef __GAME_H__
+#define __GAME_H__
 
-#define _CRT_SECURE_NO_WARNINGS 1
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,3 +18,8 @@ void InitBoard(char board[ROWS][COLS], int rows, int cols, char set);
 void SetMine(char mine[ROWS][COLS], int row, int col);
 void DisplayBoard(char board[ROWS][COLS], int row, int col);
 void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col);
+void OpenBlock(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col, int x, int y);
+int IsWin(char show[ROWS][COLS], int row, int col);
+
+
+#endif __GAME_H__
