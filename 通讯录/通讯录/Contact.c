@@ -276,12 +276,9 @@ void EmptyContact(Contact *p)
 		return;
 	}
 
-	while (p->sz)
+	for (i = 0; i < p->sz; i++)
 	{
-		for (i = 0; i < p->sz; i++)
-		{
-			p->data[i] = p->data[i + 1];
-		}
+		p->data[i] = p->data[i + 1];
 		p->sz--;
 	}
 	printf("通讯录已被清除!\n");
