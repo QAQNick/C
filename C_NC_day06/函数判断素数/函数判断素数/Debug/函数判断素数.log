@@ -1,0 +1,4 @@
+﻿  test.c
+e:\桌面\file\bit\c_nc_day06\函数判断素数\函数判断素数\test.c(32): warning C4013: “system”未定义；假设外部返回 int
+e:\桌面\file\bit\c_nc_day06\函数判断素数\函数判断素数\test.c(17): warning C4715: “prime_number”: 不是所有的控件路径都返回值
+  函数判断素数.vcxproj -> E:\桌面\File\Bit\C_NC_day06\函数判断素数\Debug\函数判断素数.exe
