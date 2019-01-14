@@ -1,0 +1,3 @@
+﻿  test.c
+e:\桌面\file\bit\c_nc_day07\非递归实现strlen\非递归实现strlen\test.c(21): warning C4013: “system”未定义；假设外部返回 int
+  非递归实现strlen.vcxproj -> E:\桌面\File\Bit\C_NC_day07\非递归实现strlen\Debug\非递归实现strlen.exe
